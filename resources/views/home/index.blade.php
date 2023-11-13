@@ -1,45 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.master')
+@section('main')
+    
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Flipbook</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-light fixed-top">
-        <div class="container">
-            {{-- <a class="navbar-brand" href="#">WritesArts</a> --}}
-            <img src="{{asset('images/WriteArtsLogo.jpeg')}}" alt="Logo" id="logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <i class="bi bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Magazine</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-light text-primary d-flex justify-center disabled">signup</a>
-                <a href="#" class="btn btn-primary d-flex justify-center disabled">Login</a>
-            </div>
-        </div>
-    </nav>
     <div class="carousel slide" id="carouselExampleIndicators">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -113,18 +75,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card" style="width: 100%;">
-                        <img src="{{asset('images/b6.jpeg')}}" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h5 class="card-title my-1">Current Edition</h5>
-                            <div class="buttons d-flex justify-content-around my-2">
-                                <a href="/view-magazine" class="btn btn-secondary">View</a>
-                                <a href="/download-magazine" class="btn btn-success">Download</a>
+                {{-- @foreach ($files as $file) --}}
+                @if (!empty($files))
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card" style="width: 100%;">
+                            <img src="{{asset('images/b6.jpeg')}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title my-1">{{$files->Name}}</h5>
+                                <div class="buttons d-flex justify-content-around my-2">
+                                    <a href="{{route('ViewMagazine',['id' => $files->id])}}" class="btn btn-secondary">View</a>
+                                    
+                                    @if (Session::has("UserEmail"))
+                                        <a href="{{route('DownloadMagazine',['id' => $files->id])}}" class="btn btn-success">Download</a>
+                                    @else
+                                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to">Download</button>
+                                    @endif
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endif
+                {{-- @endforeach --}}
                 <div class="col-lg-4 col-md-6 invisible">
                     <div class="card" style="width: 18rem;">
                         <img src="{{asset('images/b8.jpeg')}}" class="card-img-top" alt="...">
@@ -155,24 +127,4 @@
             </div>
         </div>
     </section> -->
-
-    <section class="copyright">
-        <div class="copyright-contents bg-dark">
-            <img src="{{asset('images/b9.webp')}}">
-            <div class="contents">
-                <h6 class="text-center text-light pt-2">"Handwriting is a spiritual design, even through it appears by means of a material instrument."-Eucld</h6>
-                <em class="d-flex justify-content-center text-light">copyright @ WriteArts</em>
-            </div>
-            
-        </div>
-    </section>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+@endsection
