@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route("ContactUsView") }}">Contact Us</a>
+                    </li>
                 </ul>
                 <a href="{{route('RegisterView')}}" class="btn btn-light text-primary d-flex justify-center">signup</a>
                 <a href="{{route('LoginView')}}" class="btn btn-primary d-flex justify-center">Login</a>
