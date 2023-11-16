@@ -5,7 +5,7 @@
     <div class="carousel slide" id="carouselExampleIndicators">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.webp')}}">
+                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpeg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>

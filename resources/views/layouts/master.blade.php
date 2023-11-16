@@ -17,7 +17,7 @@
     <div class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container">
             {{-- <a class="navbar-brand" href="#">WritesArts</a> --}}
-            <img src="{{asset('images/WriteArtsLogo.jpeg')}}" alt="Logo" id="logo">
+            <img src="{{asset('images/WriteArtsLogo.png')}}" alt="Logo" id="logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent">
                 <i class="bi bi-list"></i>
