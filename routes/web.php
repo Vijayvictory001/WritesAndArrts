@@ -10,6 +10,7 @@ use App\Http\Controllers\AuthenticationController;
 // Home Controller
 Route::get("/", [HomeController::class, "Index"]);
 Route::get("/about", [HomeController::class, "About"]);
+Route::get("/contact-us", [HomeController::class, "ContactUsView"]) -> name("ContactUsView");
 
 
 // Authentication Controller
