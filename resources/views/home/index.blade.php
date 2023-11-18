@@ -5,29 +5,29 @@
     <div class="carousel slide" id="carouselExampleIndicators">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpeg')}}">
+                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{asset('images/b10.jpeg')}}">
+                <img alt="..." class="d-block w-100" src="{{asset('images/b10.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{asset('images/b11.jpeg')}}">
+                <img alt="..." class="d-block w-100" src="{{asset('images/b11.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>
@@ -60,7 +60,28 @@
         </div>
     </section> -->
 
+    <section class="cards">
+        <div class="container">
+            <h2 class="text-center text-warning pt-4">How It Works:</h2>
+            <div class="row">
+                <div class="w-75 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <ol>
+                                <li><strong>Think:</strong> Consider a topic for your writing or drawing.</li>
+                                <li><strong>Ink:</strong> Use a pen or brush to bring your imagination/idea to life on paper or a board.</li>
+                                <li><strong>Share:</strong> Email your creation to <a href="mailto:thinkinkshare@gmail.com">thinkinkshare@gmail.com</a>.</li>
+                            </ol>
 
+                            <p>The 14th and 30th of each month are the submission deadlines. Your creativity will be published on the 1st and 15th of every month.</p>
+                            <p>Would you like to be an editor for an edition? Absolutely! You can become an editor by sending a request to <a href="mailto:thinkinkshare@gmail.com">thinkinkshare@gmail.com</a>. We will respond with details and support to ensure your success. It's fun and fulfilling.</p>
+                            <p>Here are a few topic tips: Write or draw based on your imagination. Explore themes like a country, a personality, fun facts, a friend, or space. The possibilities are endless. Please avoid controversial topics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="cards">
         <div class="container">
@@ -116,7 +137,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <img src="{{asset('images/b9.webp')}}" class="img-fluid" alt="Aboutlogo">
+                    <img src="{{asset('images/b9.jpeg')}}" class="img-fluid" alt="Aboutlogo">
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h1>Welcome To WritesArts</h1>

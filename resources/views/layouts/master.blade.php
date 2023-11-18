@@ -54,7 +54,7 @@
 
     <div class="copyright">
         <div class="copyright-contents bg-dark">
-            <img src="{{asset('images/b9.webp')}}">
+            <img src="{{asset('images/b9.jpg')}}">
             <div class="contents">
                 <h6 class="text-center text-light pt-2">"Handwriting is a spiritual design, even through it appears by means of a material instrument."-Eucld</h6>
                 <em class="d-flex justify-content-center text-light">copyright @ WriteArts</em>

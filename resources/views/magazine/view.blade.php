@@ -1,20 +1,31 @@
 @extends('layouts.master')
 @section('main')
-<div class="backimage">
-    <img src="{{asset('images/b10.jpeg')}}" alt="background-image">
-    <div id="contents">
-        <h1 class="text-danger">Magazine Files</h1>
-        <h3 class="text-warning">Click me and Enjoy</h3>
-        @if (Session::has("UserType") && Session::get("UserType") === 1)  
-            <a href="{{route('UploadView')}}" class="btn btn-success">Upload Files</a>
-        @else
-            <a href="#" class="btn btn-success d-none">Upload Files</a>
-        @endif
-    </div>
+<div class="carousel slide" id="carouselExampleIndicators">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpg')}}">
+            <div class="carousel-caption" id="slider-contents">
+                <h5>Welcome to WritesArts</h5>
+                <h3>Think. Ink. Share.</h3>
+                <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
+                <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
+            </div>
+        </div>
 </div>
 <section class="cards">
     <div class="container">
         <h2 class="text-center text-warning py-5">Recent Editions</h2>
+        @if (Session::has("UserType") && Session::get("UserType") === 1)  
+            <div class="row d-flex justify-content-between">
+                <h5 style="display: contents;">Please upload your edition (PDF only) here...</h5>
+
+                <a href="{{route('UploadView')}}" class="btn btn-success w-25">Upload Files</a>
+            </div>
+        @else
+            <div class="row d-flex justify-content-end d-none">
+                <a href="#" class="btn btn-success w-25">Upload Files</a>
+            </div>
+        @endif
         <div class="row my-5">
             @if (!empty($files))
                 @foreach ($files as $file)

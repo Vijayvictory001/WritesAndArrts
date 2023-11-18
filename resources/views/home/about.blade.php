@@ -3,29 +3,29 @@
     <div class="carousel slide" id="carouselExampleIndicators">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpeg')}}">
+                <img alt="bg_img" class="d-block w-100" src="{{asset('images/b9.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{asset('images/b10.jpeg')}}">
+                <img alt="..." class="d-block w-100" src="{{asset('images/b10.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{asset('images/b11.jpeg')}}">
+                <img alt="..." class="d-block w-100" src="{{asset('images/b11.jpg')}}">
                 <div class="carousel-caption" id="slider-contents">
                     <h5>Welcome to WritesArts</h5>
                     <h3>Think. Ink. Share.</h3>
-                    <p>Writesarts is more than just a platform; it's a community of young storytellers and artists.Here,they can inspire and be inspired,creating a world of wonder through their own lens. <span>How it works?</span></p>
+                    <p>WritesArts is more than just a platform; it's a community of young storytellers and artists. Here, they can inspire and be inspired, creating a world of wonder through their own lens.</p>
                     <!-- <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p> -->
                 </div>
             </div>

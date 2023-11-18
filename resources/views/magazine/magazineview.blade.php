@@ -88,7 +88,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Magazine</a>
+                        <a class="nav-link" href="{{route('MagazineView')}}">Magazine</a>
 
                     </li>
                     <li class="nav-item">
@@ -98,8 +98,13 @@
                         <a class="nav-link" href="{{ route("ContactUsView") }}">Contact Us</a>
                     </li>
                 </ul>
-                <a href="{{route('RegisterView')}}" class="btn btn-light text-primary d-flex justify-center">signup</a>
-                <a href="{{route('LoginView')}}" class="btn btn-primary d-flex justify-center">Login</a>
+                @if (Session::has("UserName"))
+                    <a href="#" class="btn btn-light text-primary d-flex justify-center">{{ Session::get('UserName', 'Anonymous') }}</a>
+                    <a href="{{ route("Logout") }}" class="btn btn-danger d-flex justify-center">Logout</a>
+                @else
+                    <a href="{{route('RegisterView')}}" class="btn btn-light text-primary d-flex justify-center">signup</a>
+                    <a href="{{route('LoginView')}}" class="btn btn-primary d-flex justify-center">Login</a>
+                @endif
             </div>
         </div>
     </nav>
@@ -114,7 +119,7 @@
 
     <section class="copyright">
         <div class="copyright-contents bg-dark">
-            <img src="{{asset('images/b9.webp')}}">
+            <img src="{{asset('images/b9.jpg')}}">
             <div class="contents">
                 <h6 class="text-center text-light pt-2">"Handwriting is a spiritual design, even through it appears by means of a material instrument."-Eucld</h6>
                 <em class="d-flex justify-content-center text-light">copyright @ WriteArts</em>
