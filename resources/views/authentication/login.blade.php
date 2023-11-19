@@ -8,14 +8,14 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/authentication.css')}}">
-    <title>Magazine-login</title>
+    <title>WritesArts-login</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container">
             {{-- <a class="navbar-brand" href="#">WritesArts</a> --}}
-            <img src="{{asset('images/WriteArtsLogo.jpeg')}}" alt="Logo" id="logo">
+            <img src="{{asset('images/WriteArtsLogo.png')}}" alt="Logo" id="logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent">
                 <i class="bi bi-list"></i>
@@ -26,7 +26,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Magazine</a>
+                        <a class="nav-link" href="{{route('MagazineView')}}">Magazine</a>
 
                     </li>
                     <li class="nav-item">

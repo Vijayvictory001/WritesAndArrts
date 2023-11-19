@@ -32,6 +32,7 @@
         }
         .invisible{
             display: none;
+            height: 0px;
         }
 
         .flipbook {

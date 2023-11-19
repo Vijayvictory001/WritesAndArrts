@@ -24,7 +24,7 @@ body {
 
 #slider-contents {
     position: absolute;
-    top: 12%;
+    top: 0%;
 }
 
 .carousel-inner:before {
@@ -246,7 +246,12 @@ body {
 }
 
 .carousel-caption {
-    background: rgba(0, 0, 0, 0.7) !important;
+    /* background: rgba(0, 0, 0, 0.7) !important; */
     right: 10% !important;
     left: 10% !important;
+    color: red;
+}
+
+.invisible{
+    height: 0px;
 }
