@@ -24,7 +24,7 @@ body {
 
 #slider-contents {
     position: absolute;
-    top: 150px;
+    top: 12%;
 }
 
 .carousel-inner:before {
@@ -34,12 +34,12 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
     z-index: 1;
 }
 
 .carousel-caption {
-    bottom: 220px;
+    bottom: 60%;
     z-index: 2;
 }
 
@@ -53,7 +53,7 @@ body {
 .carousel-caption p {
     width: 70%;
     margin: auto;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.9;
 }
 
@@ -243,4 +243,10 @@ body {
 
 .buttons {
     margin-top: 10px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7) !important;
+    right: 10% !important;
+    left: 10% !important;
 }

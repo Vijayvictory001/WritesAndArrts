@@ -50,7 +50,7 @@ class MagazineController extends Controller
     {
         $pdffile = Magazine::find($id);
         $pdfpath = $pdffile -> Path;
-        $pdfLink = public_path("PdfFiles\\$pdfpath");
+        $pdfLink = public_path("PdfFiles/$pdfpath");
 
         return response() -> download($pdfLink);
     }
