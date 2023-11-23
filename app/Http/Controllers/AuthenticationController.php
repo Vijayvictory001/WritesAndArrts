@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class AuthenticationController extends Controller
 {
@@ -47,6 +48,7 @@ class AuthenticationController extends Controller
             $request -> session() -> put('UserName', $user -> Name);
             $request -> session() -> put('UserEmail', $user -> Email);
             $request -> session() -> put('UserType', $user -> IsAdminUser);
+            Log::info("User Logged in Successfully!");
             
             return redirect('/');
         }
@@ -58,6 +60,8 @@ class AuthenticationController extends Controller
     {
         $request -> session() -> forget("UserName");
         $request -> session() -> forget("UserEmail");
+        $request -> session() -> forget("UserType");
+        Log::info("User Logout Successfully!");
 
         return redirect("/");
     }

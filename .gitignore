@@ -402,6 +402,7 @@ FodyWeavers.xsd
 /public/build
 /public/hot
 /public/storage
+/public/PdfFiles/*
 /storage/*.key
 /vendor
 .env

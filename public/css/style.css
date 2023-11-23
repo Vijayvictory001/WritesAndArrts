@@ -109,6 +109,10 @@ body {
     background: #fff;
 }
 
+.card {
+    margin-bottom: 30px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
         bottom: 370px;
@@ -249,7 +253,7 @@ body {
     /* background: rgba(0, 0, 0, 0.7) !important; */
     right: 10% !important;
     left: 10% !important;
-    color: red;
+    color: red !important;
 }
 
 .invisible{

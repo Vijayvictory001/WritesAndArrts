@@ -11,6 +11,19 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
+    <!-- Dependency Files for Flipbook -->
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <!-- costume css -->
+    <link rel="stylesheet" type="text/css" href="{{asset('css/flipbook.style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -72,6 +85,68 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+    </script>
+
+    <script src="{{asset('js/flipbook.min.js')}}"></script>
+
+    <script type="text/javascript">
+        function showPdf(pdf, id) {
+            const pdfUrl = "{{asset('PdfFiles/')}}"+'/'+pdf;
+
+            $(".showPdf-"+id).flipBook({
+                //Layout Setting
+                pdfUrl: pdfUrl,
+                lightBox: true,
+                layout: 3,
+                currentPage:{ vAlign:"bottom", hAlign:"left" },
+                // BTN SETTING
+                btnShare : { enabled:false },
+                btnPrint : {
+                    enabled: false,
+                    hideOnMobile:true
+                },
+                btnDownloadPdf : {
+                    enabled: false
+                },
+                btnDownloadPages : {
+                    enabled: false,
+                    title: "Download pages",
+                    icon: "fa-download",
+                    icon2: "file_download",
+                    url: "images/pdf.rar",
+                    name: "allPages.zip",
+                    hideOnMobile:false
+                },
+                btnColor:'rgb(255,120,60)',
+                sideBtnColor:'rgb(255,120,60)',
+                sideBtnSize:60,
+                sideBtnBackground:"rgba(0,0,0,.7)",
+                sideBtnRadius:60,
+                btnSound:{ vAlign:"top", hAlign:"left" },
+                btnAutoplay:{ vAlign:"top", hAlign:"left" },
+                // SHARING
+                btnShare : {
+                    enabled: false,
+                    title: "Share",
+                    icon: "fa-share-alt"
+                }
+                /*facebook : {
+                    enabled: true,
+                },
+                google_plus : {
+                    enabled: false
+                },
+                email : {
+                    enabled: true,
+                },
+                twitter : {
+                    enabled: true
+                },
+                pinterest : {
+                    enabled: true
+                }*/
+            });
+        }
     </script>
 </body>
 </html>

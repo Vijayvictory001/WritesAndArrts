@@ -98,18 +98,20 @@
                 </div>
                 {{-- @foreach ($files as $file) --}}
                 @if (!empty($files))
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3">
                         <div class="card" style="width: 100%;">
                             <img src="{{asset('images/b6.jpeg')}}" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title my-1">{{$files->Name}}</h5>
-                                <div class="buttons d-flex justify-content-around my-2">
-                                    <a href="{{route('ViewMagazine',['id' => $files->id])}}" class="btn btn-secondary">View</a>
+                                <div class="buttons d-flex justify-content-around my-2 showPdf-{{$files->id}}">
+                                    {{-- <a href="{{route('ViewMagazine',['id' => $files->id])}}" class="btn btn-secondary">View</a> --}}
+                                    <a OnClick="showPdf(`{{ $files->Path }}`, `{{$files->id}}`)" class="btn btn-secondary">View</a>
                                     
                                     @if (Session::has("UserEmail"))
                                         <a href="{{route('DownloadMagazine',['id' => $files->id])}}" class="btn btn-success">Download</a>
                                     @else
-                                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to">Download</button>
+                                        <a href="{{route('LoginView')}}" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</a>
+                                        {{-- <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to">Download</button> --}}
                                     @endif
 
                                 </div>

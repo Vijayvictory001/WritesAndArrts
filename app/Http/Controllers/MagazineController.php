@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Magazine;
+use Illuminate\Support\Facades\Log;
 
 class MagazineController extends Controller
 {
@@ -35,6 +36,7 @@ class MagazineController extends Controller
         $files->Name = $request->filename;
         $files->Path = $pdfFileName;
         $files->save();
+        Log::info("Pdf File Uploaded Successfully!");
 
         return back()->withSuccess('Files saved successfully');
     }
